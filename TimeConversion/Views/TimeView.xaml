@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="Netcorex.TimeConversion.Views.TimeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <GroupBox Header="Time">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"
+                          MinWidth="30" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*"
+                          MinWidth="30" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*"
+                          MinWidth="30" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*"
+                          MinWidth="30" />
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*"
+                          MinWidth="50" />
+      </Grid.ColumnDefinitions>
+
+      
+      <TextBox Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="9"
+               Text="{Binding Path=Value, UpdateSourceTrigger=PropertyChanged, StringFormat=dd\\:hh\\:mm\\:ss\\.fff}"
+               />
+      
+      
+      <TextBox Grid.Row="1"
+               Grid.Column="0"
+               Text="{Binding Path=Days, UpdateSourceTrigger=PropertyChanged}" />
+
+      <TextBlock Grid.Row="1"
+                 Grid.Column="1"
+                 Text=":" />
+
+      <TextBox Grid.Row="1"
+               Grid.Column="2"
+               Text="{Binding Path=Hours, UpdateSourceTrigger=PropertyChanged}" />
+
+      <TextBlock Grid.Row="1"
+                 Grid.Column="3"
+                 Text=":" />
+
+      <TextBox Grid.Row="1"
+               Grid.Column="4"
+               Text="{Binding Path=Minutes, UpdateSourceTrigger=PropertyChanged}" />
+
+      <TextBlock Grid.Row="1"
+                 Grid.Column="5"
+                 Text=":" />
+
+      <TextBox Grid.Row="1"
+               Grid.Column="6"
+               Text="{Binding Path=Seconds, UpdateSourceTrigger=PropertyChanged}" />
+
+      <TextBlock Grid.Row="1"
+                 Grid.Column="7"
+                 Text="." />
+
+      <TextBox Grid.Row="1"
+               Grid.Column="8"
+               Text="{Binding Path=Milliseconds, UpdateSourceTrigger=PropertyChanged}" />
+
+
+    </Grid>
+  </GroupBox>
+</UserControl>
